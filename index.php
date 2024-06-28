@@ -32,18 +32,45 @@ use function PHPSTORM_META\map;
             }
            }
            if($count == 0){
-            echo "Prime: {$num}";
+            echo "Prime: {$num} <br>";
            }else{
-            echo "Not a Prime {$num}";
+            echo "Not a Prime {$num} <br>";
            }
         }
     }
+    class MobilePhone{
+        public function brand($brandName){
+            return $brandName;
+        }
+        public function model($model){
+            return $model;
+        }
+        public function operatingSystem($system){
+            return $system;
+        }
+        public function batteryCapacity($batteryCapapcity){
+            return $batteryCapapcity;
+        }
+
+    }
+
+
     $operations = new BasicOperations();
     $operations->multiplicationTable(7);
     $operations->factorialOfGivenNum(10);
     $myArray = [2, 3, 5, 7, 11];
     $operations->sumOfArray($myArray);
     $operations->isPrime(33);
+    // ------------------
+    $xiomi = new MobilePhone();
+    $brandName = $xiomi->brand("Xiomi");
+    $modelName = $xiomi->model("Mi 11");
+    $OS = $xiomi->operatingSystem("MIUI 12");
+    $batteryCapa = $xiomi->batteryCapacity("4000mAh");
 
+    echo "Brand: " . $brandName . "<br>";
+    echo "Model: " . $modelName . "<br>";
+    echo "Operating System: " . $OS . "<br>";
+    echo "Battery Capacity: " . $batteryCapa;
 
 ?>
